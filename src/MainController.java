@@ -7,6 +7,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -33,10 +34,10 @@ public class MainController {
     private ComboBox amPmCombo; // Value injected by FXMLLoader
 
     @FXML // fx:id="med1Table"
-    private TableView<String> medTable; // Value injected by FXMLLoader
+    private TableView<Time> medTable; // Value injected by FXMLLoader
     
     @FXML
-    private TableColumn med1Column;
+    private TableColumn<Time, String> med1Column;
 
     @FXML // fx:id="addRemButton"
     private Button addRemButton; // Value injected by FXMLLoader
@@ -46,17 +47,19 @@ public class MainController {
     
     @FXML // fx:id="removeButton"
     private Button removeButton; // Value injected by FXMLLoader
+    
+    private ObservableList<Time> times;
 
     @FXML
     void addReminder(ActionEvent event) 
     {
-    	medTable.setItems(FXCollections.observableArrayList("6:00 AM"));
+//    	times.add(new Time(7, true));
     }
     
     @FXML
     void removeReminder(ActionEvent event) 
     {
-    	medTable.getItems().removeAll(medTable.getItems());
+//    	medTable.getItems().removeAll(medTable.getItems());
     }
 
     @FXML
@@ -76,7 +79,9 @@ public class MainController {
     @FXML // This method is called by the FXMLLoader when initialization is complete
     void initialize() 
     {
+//    	med1Column.setCellValueFactory(cellData -> cellData.getValue().timeProperty());
     	
+//    	medTable.setItems(FXCollections.observableArrayList(times));
     }
     
 }

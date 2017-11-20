@@ -1,7 +1,5 @@
-import java.io.IOException;
-import java.net.URL;
-
 import javafx.application.Application;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -11,9 +9,12 @@ public class Login extends Application
 {
 	protected static Stage mainStage = null;
 	
+	private static ObservableList<Time> times;
+	
 	public static void main(String[] args)
 	{
 		launch(args);
+//		times.add(new Time(7, true));
 	}
 
 	@Override
