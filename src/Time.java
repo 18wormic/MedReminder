@@ -1,43 +1,24 @@
-import javafx.beans.property.IntegerProperty;
-import javafx.beans.property.SimpleIntegerProperty;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
+import java.time.DayOfWeek;
+import java.time.LocalTime;
 
 public class Time
 {
-	private final int time;
-	private final boolean am;
-	
-	public Time(int aTime, boolean aAm)
+	public Time(int hour, int minute, DayOfWeek day)
 	{
-		time = aTime;
-		am = aAm;
+		timeOfReminder = LocalTime.of(hour, minute);
+		dayOfReminder = day;
 	}
 	
-	public int getTime()
+	public DayOfWeek getDay()
 	{
-		return time;
+		return dayOfReminder;
 	}
 	
-	public boolean getAm()
+	public LocalTime getTime()
 	{
-		return am;
+		return timeOfReminder;
 	}
 	
-	public StringProperty timeProperty()
-	{
-		return new SimpleStringProperty(time + ":00");
-	}
-	
-	public StringProperty amProperty()
-	{
-		if (am)
-		{
-			return new SimpleStringProperty("AM");
-		}
-		else
-		{
-			return new SimpleStringProperty("PM");
-		}
-	}
+	private DayOfWeek dayOfReminder;
+	private LocalTime timeOfReminder;
 }
