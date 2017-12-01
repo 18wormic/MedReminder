@@ -41,6 +41,7 @@
                                     <TextField editable="false" layoutX="116.0" layoutY="39.0" text="admin" />
                                     <TextField editable="false" layoutX="116.0" layoutY="94.0" text="•••••" />
                                     <Button fx:id="loginButton" layoutX="262.0" layoutY="146.0" mnemonicParsing="false" onAction="#loadHome" text="Log in" />
+                                    <Button fx:id="newUserButton" layoutX="23.0" layoutY="146.0" mnemonicParsing="false" onAction="#newUser" text="New User" />
                                  </children>
                               </AnchorPane>
                           </items>
