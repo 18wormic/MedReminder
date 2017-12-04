@@ -1,6 +1,7 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class User
+public class User implements Serializable
 {
 	public User(String username, String password)
 	{
@@ -13,7 +14,7 @@ public class User
 		
 	}
 	
-	public ArrayList<Object> getMed()
+	public ArrayList<Medication> getMed()
 	{
 		return null;
 	}

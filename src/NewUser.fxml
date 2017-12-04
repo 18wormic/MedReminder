@@ -37,16 +37,18 @@
                            <children>
                               <Label layoutX="20.0" layoutY="45.0" text="Username:" />
                               <Label layoutX="23.0" layoutY="100.0" text="Password:" />
-                              <TextField editable="false" layoutX="116.0" layoutY="39.0" text="admin" />
-                              <TextField editable="false" layoutX="116.0" layoutY="94.0" text="•••••" />
+                              <TextField fx:id="newUserUsernameField" layoutX="116.0" layoutY="39.0" />
+                              <TextField fx:id="newUserPasswordField" layoutX="116.0" layoutY="94.0" />
                               <Button fx:id="createUserButton" layoutX="266.0" layoutY="207.0" mnemonicParsing="false" onAction="#createNewUser" text="Create" />
-                              <TextField editable="false" layoutX="116.0" layoutY="152.0" text="•••••" />
+                              <TextField fx:id="newUserPasswordField2" layoutX="116.0" layoutY="152.0" />
                               <Label layoutX="23.0" layoutY="172.0" text="Password:" />
                               <Label layoutX="23.0" layoutY="152.0" text="Re-type" />
                            </children>
                         </AnchorPane>
                     </items>
                   </SplitPane>
+                  <Text fx:id="newUserStatusText" layoutX="182.0" layoutY="405.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                  <Button fx:id="backButton" layoutX="20.0" layoutY="26.0" mnemonicParsing="false" onAction="#goBack" text="Back" />
                </children>
             </AnchorPane>
         </items>

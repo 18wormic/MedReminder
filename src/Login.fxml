@@ -38,9 +38,9 @@
                                  <children>
                                     <Label layoutX="20.0" layoutY="45.0" text="Username:" />
                                     <Label layoutX="23.0" layoutY="100.0" text="Password:" />
-                                    <TextField editable="false" layoutX="116.0" layoutY="39.0" text="admin" />
-                                    <TextField editable="false" layoutX="116.0" layoutY="94.0" text="•••••" />
-                                    <Button fx:id="loginButton" layoutX="262.0" layoutY="146.0" mnemonicParsing="false" onAction="#loadHome" text="Log in" />
+                                    <TextField fx:id="usernameField" layoutX="116.0" layoutY="39.0" />
+                                    <TextField fx:id="passwordField" layoutX="116.0" layoutY="94.0" />
+                                    <Button fx:id="loginButton" layoutX="262.0" layoutY="146.0" mnemonicParsing="false" onAction="#login" text="Log in" />
                                     <Button fx:id="newUserButton" layoutX="23.0" layoutY="146.0" mnemonicParsing="false" onAction="#newUser" text="New User" />
                                  </children>
                               </AnchorPane>
@@ -48,6 +48,7 @@
                         </SplitPane>
                      </children>
                   </HBox>
+                  <Text fx:id="loginStatusText" layoutX="199.0" layoutY="411.0" strokeType="OUTSIDE" strokeWidth="0.0" />
                </children>
             </AnchorPane>
         </items>

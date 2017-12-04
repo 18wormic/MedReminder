@@ -19,6 +19,7 @@
 								<Font size="36.0" />
 							</font>
 						</Text>
+                  <Button fx:id="logoutButton" layoutX="622.0" layoutY="25.0" mnemonicParsing="false" onAction="#logout" text="Save and Log out" />
 					</children>
 				</AnchorPane>
 				<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="512.0" prefWidth="798.0">
@@ -29,7 +30,7 @@
 									<content>
 										<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
 											<children>
-												<TableView fx:id="medTable" layoutX="32.0" layoutY="27.0" prefHeight="372.0" prefWidth="734.0" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="32.0" AnchorPane.topAnchor="27.0">
+												<TableView fx:id="medTable" editable="true" layoutX="32.0" layoutY="27.0" prefHeight="372.0" prefWidth="734.0" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="32.0" AnchorPane.topAnchor="27.0">
 													<columns>
 														<TableColumn fx:id="med1Column" minWidth="-Infinity" prefWidth="400.0" text="Med 1">
 														</TableColumn>
@@ -38,7 +39,6 @@
 														<TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
 													</columnResizePolicy>
 												</TableView>
-												<Button fx:id="removeButton" layoutX="688.0" layoutY="407.0" mnemonicParsing="false" onAction="#removeReminder" text="Remove" AnchorPane.bottomAnchor="8.0" AnchorPane.rightAnchor="21.0" />
 											</children>
 										</AnchorPane>
 									</content>
@@ -49,7 +49,7 @@
 											<children>
 												<TabPane layoutX="119.0" layoutY="6.0" prefHeight="454.0" prefWidth="798.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
 													<tabs>
-														<Tab text="Med 1">
+														<Tab closable="false" text="Med 1">
 															<content>
 																<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
 																	<children>
@@ -58,14 +58,14 @@
 																				<Font name="System Bold" size="18.0" />
 																			</font>
 																		</Label>
-																		<TextField editable="false" layoutX="134.0" layoutY="21.0" prefHeight="39.0" prefWidth="645.0" text="Med 1" AnchorPane.leftAnchor="134.0" AnchorPane.rightAnchor="19.0" />
-																		<TextArea editable="false" layoutX="134.0" layoutY="86.0" prefHeight="130.0" prefWidth="644.0" text="Generic medication." AnchorPane.leftAnchor="134.0" AnchorPane.rightAnchor="19.0" />
+																		<TextField fx:id="medName" layoutX="134.0" layoutY="21.0" prefHeight="39.0" prefWidth="645.0" promptText="Enter name..." text="Med 1" AnchorPane.leftAnchor="134.0" AnchorPane.rightAnchor="19.0" />
+																		<TextArea layoutX="134.0" layoutY="86.0" prefHeight="130.0" prefWidth="644.0" promptText="Enter Description..." text="Generic medication." AnchorPane.leftAnchor="134.0" AnchorPane.rightAnchor="19.0" />
 																		<Label layoutX="14.0" layoutY="86.0" text="Description:">
 																			<font>
 																				<Font name="System Bold" size="18.0" />
 																			</font>
 																		</Label>
-																		<ComboBox fx:id="hourCombo" layoutX="178.0" layoutY="261.0" prefWidth="150.0">
+																		<ComboBox fx:id="hourCombo" layoutX="317.0" layoutY="261.0" prefWidth="150.0" promptText="Select Hour">
 																			<items>
 																				<FXCollections fx:factory="observableArrayList">
 																					<String fx:id="time2" fx:value="7:00" />
@@ -77,14 +77,17 @@
 																				<Font name="System Bold" size="18.0" />
 																			</font>
 																		</Label>
-																		<ComboBox fx:id="amPmCombo" layoutX="360.0" layoutY="261.0" prefWidth="150.0">
+																		<ComboBox fx:id="amPmCombo" layoutX="482.0" layoutY="261.0" prefWidth="150.0" promptText="Select AM/PM...">
 																			<items>
 																				<FXCollections fx:factory="observableArrayList">
 																					<String fx:id="time1" fx:value="AM" />
 																				</FXCollections>
 																			</items>
 																		</ComboBox>
-																		<Button fx:id="addRemButton" layoutX="600.0" layoutY="261.0" mnemonicParsing="false" onAction="#addReminder" text="Add" />
+																		<Button fx:id="addRemButton" layoutX="645.0" layoutY="261.0" mnemonicParsing="false" onAction="#addReminder" text="Add Reminder" />
+                                                      <Button fx:id="addMedicationButton" layoutX="14.0" layoutY="342.0" mnemonicParsing="false" onAction="#addMed" text="Add Medication..." />
+                                                      <ComboBox fx:id="dayCombo" layoutX="148.0" layoutY="261.0" prefWidth="150.0" promptText="Select Day..." />
+                                                      <Button fx:id="removeMedicationButton" layoutX="569.0" layoutY="342.0" mnemonicParsing="false" onAction="#removeMed" text="Remove this medication" />
 																	</children>
 																</AnchorPane>
 															</content>
