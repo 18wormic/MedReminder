@@ -7,6 +7,8 @@ public class User implements Serializable
 	{
 		user = username;
 		pass = password;
+		meds = new ArrayList<Medication>();
+		
 	}
 	
 	public void addMed(Object med)
@@ -16,7 +18,7 @@ public class User implements Serializable
 	
 	public ArrayList<Medication> getMed()
 	{
-		return null;
+		return meds;
 	}
 	
 	public void setUser(String username)
@@ -39,6 +41,7 @@ public class User implements Serializable
 		return pass;
 	}
 	
+	private ArrayList<Medication> meds;
 	private String user;
 	private String pass;
 }

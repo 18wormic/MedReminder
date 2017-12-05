@@ -1,11 +1,16 @@
+import java.io.Serializable;
 import java.time.DayOfWeek;
 import java.util.ArrayList;
 
-public class Medication
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
+
+public class Medication implements Serializable
 {
 	public Medication(String name)
 	{
 		this.name = name;
+		reminders = new ArrayList<Time>();
 	}
 	
 	public void setDescription(String desc)
@@ -62,6 +67,16 @@ public class Medication
 	public ArrayList<Time> getReminders()
 	{
 		return reminders;
+	}
+	
+	public StringProperty nameProperty()
+	{
+		return new SimpleStringProperty(name);
+	}
+	
+	public StringProperty descProperty()
+	{
+		return new SimpleStringProperty(desc);
 	}
 	
 	private String name;

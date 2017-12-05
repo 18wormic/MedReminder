@@ -32,8 +32,10 @@
 											<children>
 												<TableView fx:id="medTable" editable="true" layoutX="32.0" layoutY="27.0" prefHeight="372.0" prefWidth="734.0" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="32.0" AnchorPane.topAnchor="27.0">
 													<columns>
-														<TableColumn fx:id="med1Column" minWidth="-Infinity" prefWidth="400.0" text="Med 1">
+														<TableColumn fx:id="medColumn" minWidth="-Infinity" prefWidth="400.0" text="Medications">
 														</TableColumn>
+                                          <TableColumn fx:id="timeColumn" prefWidth="75.0" text="Times" />
+                                          <TableColumn fx:id="descColumn" prefWidth="75.0" text="Description" />
 													</columns>
 													<columnResizePolicy>
 														<TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
@@ -47,7 +49,7 @@
 									<content>
 										<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
 											<children>
-												<TabPane layoutX="119.0" layoutY="6.0" prefHeight="454.0" prefWidth="798.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+												<TabPane fx:id="medTabs" layoutX="119.0" layoutY="6.0" prefHeight="454.0" prefWidth="798.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
 													<tabs>
 														<Tab closable="false" text="Med 1">
 															<content>
@@ -65,7 +67,7 @@
 																				<Font name="System Bold" size="18.0" />
 																			</font>
 																		</Label>
-																		<ComboBox fx:id="hourCombo" layoutX="317.0" layoutY="261.0" prefWidth="150.0" promptText="Select Hour">
+																		<ComboBox fx:id="hourCombo" layoutX="419.0" layoutY="261.0" prefWidth="150.0" promptText="Select Hour">
 																			<items>
 																				<FXCollections fx:factory="observableArrayList">
 																					<String fx:id="time2" fx:value="7:00" />
@@ -77,16 +79,9 @@
 																				<Font name="System Bold" size="18.0" />
 																			</font>
 																		</Label>
-																		<ComboBox fx:id="amPmCombo" layoutX="482.0" layoutY="261.0" prefWidth="150.0" promptText="Select AM/PM...">
-																			<items>
-																				<FXCollections fx:factory="observableArrayList">
-																					<String fx:id="time1" fx:value="AM" />
-																				</FXCollections>
-																			</items>
-																		</ComboBox>
 																		<Button fx:id="addRemButton" layoutX="645.0" layoutY="261.0" mnemonicParsing="false" onAction="#addReminder" text="Add Reminder" />
                                                       <Button fx:id="addMedicationButton" layoutX="14.0" layoutY="342.0" mnemonicParsing="false" onAction="#addMed" text="Add Medication..." />
-                                                      <ComboBox fx:id="dayCombo" layoutX="148.0" layoutY="261.0" prefWidth="150.0" promptText="Select Day..." />
+                                                      <ComboBox fx:id="dayCombo" layoutX="206.0" layoutY="261.0" prefWidth="150.0" promptText="Select Day..." />
                                                       <Button fx:id="removeMedicationButton" layoutX="569.0" layoutY="342.0" mnemonicParsing="false" onAction="#removeMed" text="Remove this medication" />
 																	</children>
 																</AnchorPane>

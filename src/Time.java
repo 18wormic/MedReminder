@@ -1,7 +1,8 @@
+import java.io.Serializable;
 import java.time.DayOfWeek;
 import java.time.LocalTime;
 
-public class Time
+public class Time implements Serializable
 {
 	public Time(int hour, int minute, DayOfWeek day)
 	{

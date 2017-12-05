@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.FXCollections?>
+
+<Tab closable="false" text="Med 1">
+	<content>
+		<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0"
+			prefWidth="200.0">
+			<children>
+				<Label layoutX="14.0" layoutY="27.0" text="Name:">
+					<font>
+						<Font name="System Bold" size="18.0" />
+					</font>
+				</Label>
+				<TextField fx:id="medName" layoutX="134.0" layoutY="21.0"
+					prefHeight="39.0" prefWidth="645.0" promptText="Enter name..."
+					text="Med 1" AnchorPane.leftAnchor="134.0" AnchorPane.rightAnchor="19.0" />
+				<TextArea layoutX="134.0" layoutY="86.0" prefHeight="130.0"
+					prefWidth="644.0" promptText="Enter Description..." text="Generic medication."
+					AnchorPane.leftAnchor="134.0" AnchorPane.rightAnchor="19.0" />
+				<Label layoutX="14.0" layoutY="86.0" text="Description:">
+					<font>
+						<Font name="System Bold" size="18.0" />
+					</font>
+				</Label>
+				<ComboBox fx:id="hourCombo" layoutX="419.0" layoutY="261.0"
+					prefWidth="150.0" promptText="Select Hour">
+					<items>
+						<FXCollections fx:factory="observableArrayList">
+							<String fx:id="time2" fx:value="7:00" />
+						</FXCollections>
+					</items>
+				</ComboBox>
+				<Label layoutX="14.0" layoutY="267.0" text="Add Reminder:">
+					<font>
+						<Font name="System Bold" size="18.0" />
+					</font>
+				</Label>
+				<Button fx:id="addRemButton" layoutX="645.0" layoutY="261.0"
+					mnemonicParsing="false" onAction="#addReminder" text="Add Reminder" />
+				<Button fx:id="addMedicationButton" layoutX="14.0" layoutY="342.0"
+					mnemonicParsing="false" onAction="#addMed" text="Add Medication..." />
+				<ComboBox fx:id="dayCombo" layoutX="206.0" layoutY="261.0"
+					prefWidth="150.0" promptText="Select Day..." />
+				<Button fx:id="removeMedicationButton" layoutX="569.0"
+					layoutY="342.0" mnemonicParsing="false" onAction="#removeMed"
+					text="Remove this medication" />
+			</children>
+		</AnchorPane>
+	</content>
+</Tab>
