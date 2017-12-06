@@ -42,6 +42,7 @@
 													</columnResizePolicy>
 												</TableView>
                                     <Button fx:id="removeRem" layoutX="614.0" layoutY="410.0" mnemonicParsing="false" onAction="#removeReminder" text="Remove Reminder" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="14.0" />
+                                    <Text fx:id="mainStatus" layoutX="32.0" layoutY="436.0" strokeType="OUTSIDE" strokeWidth="0.0" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="32.0" />
 											</children>
 										</AnchorPane>
 									</content>
