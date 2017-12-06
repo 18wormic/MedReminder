@@ -1,8 +1,4 @@
 
-/**
- * Sample Skeleton for 'Login.fxml' Controller Class
- */
-
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -26,6 +22,9 @@ import javafx.stage.Stage;
 
 public class MainController
 {
+	
+	private static Time nearestTime;
+
 	private static Medication currentMed;
 
 	private String workingDirectory;
@@ -55,7 +54,7 @@ public class MainController
 
 	@FXML
 	private Button removeRem;
-	
+
 	@FXML
 	private Text mainStatus;
 
@@ -77,8 +76,16 @@ public class MainController
 			mainStatus.setText("");
 			for (Medication med : Login.getUser().getMed())
 			{
-				if (med.getName().equals(toRem.getName()));
+				if (med.getName().equals(toRem.getName()) && med.getDescription().equals(toRem.getDescription()))
+				{
+					for (Time time : med.getReminders())
+					{
+						if (time.getTime().equals(toRem.getTime().getTime()) && time.getDay().equals(toRem.getTime().getDay()))
+							med.getReminders().remove(time);
+					}
+				}
 			}
+			refresh();
 		}
 	}
 
@@ -130,6 +137,54 @@ public class MainController
 			medTabs.getTabs().add(temp);
 
 		}
+		
+//		class TimeTracker extends Thread
+//		{	
+//			
+//		TimeTracker()
+//	       {
+//	           nearestTime = Login.getUser().getNearestTime();
+//	       }
+//		
+//	       
+//	       public void run()
+//	       {
+//
+//	    	   
+//	        try
+//			{
+//				Thread.sleep(1000);
+//			}
+//			catch (InterruptedException e)
+//			{
+//				// TODO Auto-generated catch block
+//				e.printStackTrace();
+//			}
+//	        
+//	        while (Login.getUser().getMed().size() == 0 || Login.getUser().getMed().get(0).getReminders().size() == 0)
+//	        {
+//	        	try
+//				{
+//					Thread.sleep(5000);
+//				}
+//				catch (InterruptedException e)
+//				{
+//					// TODO Auto-generated catch block
+//					e.printStackTrace();
+//				}
+//	        }
+//	        		
+//	           
+//	           if (Login.getUser().getNearestTime().checkRem() == true)
+//	           {
+//	               Login.getUser().removeNearest();
+//	               
+//	               nearestTime =  Login.getUser().getNearestTime();
+//	           }
+//	       }
+//		}
+//		TimeTracker time = new TimeTracker();
+//		time.start();
 	}
 
 	public static Medication getCurrentMed()

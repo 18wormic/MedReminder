@@ -132,8 +132,8 @@ public class TabController
 					final String newValue)
 			{
 				med.setDescription(medDesc.getText());
-				MainController.getTable().refresh();
 				tabStatusText.setText("");
+				MainController.refresh();
 			}
 		});
 
@@ -145,8 +145,8 @@ public class TabController
 			{
 				currentTab.setText(medName.getText());
 				med.setName(medName.getText());
-				MainController.getTable().refresh();
 				tabStatusText.setText("");
+				MainController.refresh();
 			}
 		});
 	}

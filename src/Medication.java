@@ -46,32 +46,7 @@ public class Medication implements Serializable
 	public void addReminder(int hour, DayOfWeek day)
 	{
 		Time temp = new Time(hour, day);
-		
-//		if (reminders.isEmpty())
-//		{
-			reminders.add(temp);
-//		}
-//		else
-//		{
-//			for (int i = 0; i < reminders.size(); i++)
-//			{
-//				if (temp.getDay().getValue() < reminders.get(i).getDay().getValue())
-//				{
-//					continue;
-//				}
-//				else if (temp.getDay().getValue() > reminders.get(i).getDay().getValue()) 
-//				{
-//					reminders.add(i, temp);
-//				}
-//				else
-//				{
-//					if (temp.getTime().isAfter(reminders.get(i).getTime()))
-//					{
-//						reminders.add(i, temp);
-//					}
-//				}
-//			}
-//		}
+		reminders.add(temp);
 	}
 	
 	public ArrayList<Time> getReminders()
@@ -94,6 +69,18 @@ public class Medication implements Serializable
 		return new SimpleStringProperty(remTime.toString());
 	}
 	
+	public Time returnNearestReminder()
+    {
+        return nearest;
+    }
+    
+    public void removeNearest()
+    {
+        reminders.remove(0);
+        nearest = reminders.get(0);
+    }
+	
+    private Time nearest;
 	private String name;
 	private String desc;
 	private Time remTime;
