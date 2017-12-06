@@ -55,8 +55,6 @@ public class LoginController
 		{
 			Login.setUser((User) new ObjectInputStream(new FileInputStream(inFolder + usernameField.getText() + ".dat"))
 					.readObject());
-			System.out.println(Login.getUser().getPass());
-			System.out.println(Login.getUser().getUser());
 			if (Login.getUser().getPass().equals(passwordField.getText()))
 			{
 				Stage stage;
@@ -68,12 +66,6 @@ public class LoginController
 				Scene scene = new Scene(root);
 				stage.setScene(scene);
 				stage.show();
-
-				// for (Medication med : Login.getUser().getMed())
-				// {
-				// Tab temp = new Tab();
-				//
-				// }
 			}
 			else
 			{

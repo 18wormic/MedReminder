@@ -11,9 +11,9 @@ public class User implements Serializable
 		
 	}
 	
-	public void addMed(Object med)
+	public void addMed(Medication med)
 	{
-		
+		meds.add(med);
 	}
 	
 	public ArrayList<Medication> getMed()

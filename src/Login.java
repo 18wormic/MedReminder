@@ -1,5 +1,3 @@
-import java.io.IOException;
-
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -28,8 +26,6 @@ public class Login extends Application
 		stage.setTitle("Medication Reminder");
 		stage.setScene(scene);
 		stage.show();
-		
-		showMedStuff();
 	}
 	
 	public static void setUser(User aUser)
@@ -61,16 +57,5 @@ public class Login extends Application
 	{
 		return inFolder;
 	}
-	
-	public void showMedStuff() {
-            // Load medication info
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(Login.class.getResource("Main.fxml")); // Might need to change if error occurs
-
-
-            // Give the controller access to the main app.
-//            MedController controller = loader.getController();
-//            controller.setMainApp(this);
-    }
 
 }

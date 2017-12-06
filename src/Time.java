@@ -4,9 +4,9 @@ import java.time.LocalTime;
 
 public class Time implements Serializable
 {
-	public Time(int hour, int minute, DayOfWeek day)
+	public Time(int hour, DayOfWeek day)
 	{
-		timeOfReminder = LocalTime.of(hour, minute);
+		timeOfReminder = LocalTime.of(hour, 0);
 		dayOfReminder = day;
 	}
 	
@@ -18,6 +18,12 @@ public class Time implements Serializable
 	public LocalTime getTime()
 	{
 		return timeOfReminder;
+	}
+	
+	@Override
+	public String toString()
+	{
+		return timeOfReminder.toString() + ", " + dayOfReminder.toString();
 	}
 	
 	private DayOfWeek dayOfReminder;

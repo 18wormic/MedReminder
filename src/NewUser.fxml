@@ -10,7 +10,7 @@
    <children>
       <SplitPane dividerPositions="0.15719063545150502" layoutX="288.0" layoutY="228.0" orientation="VERTICAL" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: lightBlue;">
+          <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: lightBlue;">
                <children>
                   <Text fx:id="title" layoutX="25.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Medication Reminder">
                      <font>
@@ -19,21 +19,21 @@
                   </Text>
                </children>
             </AnchorPane>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="512.0" prefWidth="798.0">
+          <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="512.0" prefWidth="798.0">
                <children>
-                  <HBox alignment="CENTER" layoutX="199.0" layoutY="125.0" prefHeight="250.0" prefWidth="400.0" />
-                  <SplitPane dividerPositions="0.1774193548387097" layoutX="187.0" layoutY="51.0" orientation="VERTICAL" prefHeight="324.0" prefWidth="425.0" style="-fx-background-color: lightBlue;">
+                  <HBox alignment="CENTER" layoutX="199.0" layoutY="125.0" prefHeight="250.0" prefWidth="400.0" AnchorPane.bottomAnchor="113.0" AnchorPane.leftAnchor="199.0" AnchorPane.rightAnchor="199.0" AnchorPane.topAnchor="125.0" />
+                  <SplitPane dividerPositions="0.1774193548387097" layoutX="187.0" layoutY="51.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="324.0" prefWidth="425.0" style="-fx-background-color: lightBlue;">
                     <items>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="425.0" SplitPane.resizableWithParent="false">
                            <children>
-                              <Label layoutX="14.0" layoutY="6.0" text="New user">
+                              <Label layoutX="14.0" layoutY="13.0" text="New user">
                                  <font>
                                     <Font name="System Bold" size="18.0" />
                                  </font>
                               </Label>
                            </children>
                         </AnchorPane>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="425.0" SplitPane.resizableWithParent="false">
                            <children>
                               <Label layoutX="20.0" layoutY="45.0" text="Username:" />
                               <Label layoutX="23.0" layoutY="100.0" text="Password:" />
@@ -48,7 +48,7 @@
                     </items>
                   </SplitPane>
                   <Text fx:id="newUserStatusText" layoutX="182.0" layoutY="405.0" strokeType="OUTSIDE" strokeWidth="0.0" />
-                  <Button fx:id="backButton" layoutX="20.0" layoutY="26.0" mnemonicParsing="false" onAction="#goBack" text="Back" />
+                  <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#goBack" text="Back" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0" />
                </children>
             </AnchorPane>
         </items>

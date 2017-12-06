@@ -8,7 +8,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.collections.FXCollections?>
 
-<Tab closable="false" text="Med 1">
+<Tab fx:id="currentTab" closable="false" text="$name"
+	xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="TabController">
 	<content>
 		<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0"
 			prefWidth="200.0">
@@ -19,10 +21,12 @@
 					</font>
 				</Label>
 				<TextField fx:id="medName" layoutX="134.0" layoutY="21.0"
-					prefHeight="39.0" prefWidth="645.0" promptText="Enter name..."
-					text="Med 1" AnchorPane.leftAnchor="134.0" AnchorPane.rightAnchor="19.0" />
-				<TextArea layoutX="134.0" layoutY="86.0" prefHeight="130.0"
-					prefWidth="644.0" promptText="Enter Description..." text="Generic medication."
+					prefHeight="39.0" prefWidth="645.0"
+					promptText="Enter name..." text="$name" AnchorPane.leftAnchor="134.0"
+					AnchorPane.rightAnchor="19.0" />
+				<TextArea fx:id="medDesc" layoutX="134.0" layoutY="86.0"
+					prefHeight="130.0" prefWidth="644.0"
+					promptText="Enter Description..." text="$desc"
 					AnchorPane.leftAnchor="134.0" AnchorPane.rightAnchor="19.0" />
 				<Label layoutX="14.0" layoutY="86.0" text="Description:">
 					<font>
@@ -30,10 +34,34 @@
 					</font>
 				</Label>
 				<ComboBox fx:id="hourCombo" layoutX="419.0" layoutY="261.0"
-					prefWidth="150.0" promptText="Select Hour">
+					prefWidth="150.0" promptText="Select Hour" AnchorPane.leftAnchor="419.0"
+					AnchorPane.topAnchor="261.0">
 					<items>
 						<FXCollections fx:factory="observableArrayList">
-							<String fx:id="time2" fx:value="7:00" />
+							<String fx:value="0:00" />
+							<String fx:value="1:00" />
+							<String fx:value="2:00" />
+							<String fx:value="3:00" />
+							<String fx:value="4:00" />
+							<String fx:value="5:00" />
+							<String fx:value="6:00" />
+							<String fx:value="7:00" />
+							<String fx:value="8:00" />
+							<String fx:value="9:00" />
+							<String fx:value="10:00" />
+							<String fx:value="11:00" />
+							<String fx:value="12:00" />
+							<String fx:value="13:00" />
+							<String fx:value="14:00" />
+							<String fx:value="15:00" />
+							<String fx:value="16:00" />
+							<String fx:value="17:00" />
+							<String fx:value="18:00" />
+							<String fx:value="19:00" />
+							<String fx:value="20:00" />
+							<String fx:value="21:00" />
+							<String fx:value="22:00" />
+							<String fx:value="23:00" />
 						</FXCollections>
 					</items>
 				</ComboBox>
@@ -43,14 +71,31 @@
 					</font>
 				</Label>
 				<Button fx:id="addRemButton" layoutX="645.0" layoutY="261.0"
-					mnemonicParsing="false" onAction="#addReminder" text="Add Reminder" />
+					mnemonicParsing="false" onAction="#addReminder" text="Add Reminder"
+					AnchorPane.leftAnchor="645.0" AnchorPane.topAnchor="261.0" />
 				<Button fx:id="addMedicationButton" layoutX="14.0" layoutY="342.0"
-					mnemonicParsing="false" onAction="#addMed" text="Add Medication..." />
+					mnemonicParsing="false" onAction="#addMed" text="Add Medication..."
+					AnchorPane.bottomAnchor="28.0" AnchorPane.leftAnchor="14.0" />
 				<ComboBox fx:id="dayCombo" layoutX="206.0" layoutY="261.0"
-					prefWidth="150.0" promptText="Select Day..." />
+					prefWidth="150.0" promptText="Select Day..." AnchorPane.leftAnchor="206.0"
+					AnchorPane.topAnchor="261.0">
+					<items>
+						<FXCollections fx:factory="observableArrayList">
+							<String fx:value="Sunday" />
+							<String fx:value="Monday" />
+							<String fx:value="Tuesday" />
+							<String fx:value="Wednesday" />
+							<String fx:value="Thursday" />
+							<String fx:value="Friday" />
+							<String fx:value="Saturday" />
+						</FXCollections>
+					</items>
+					</ComboBox>
 				<Button fx:id="removeMedicationButton" layoutX="569.0"
 					layoutY="342.0" mnemonicParsing="false" onAction="#removeMed"
-					text="Remove this medication" />
+					text="Remove this medication" AnchorPane.bottomAnchor="28.0"
+					AnchorPane.rightAnchor="21.0" />
+					 <Text fx:id="tabStatusText" layoutX="226.0" layoutY="368.0" strokeType="OUTSIDE" strokeWidth="0.0" AnchorPane.bottomAnchor="36.482421875" AnchorPane.leftAnchor="226.0" />
 			</children>
 		</AnchorPane>
 	</content>

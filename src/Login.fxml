@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.effect.*?>
@@ -10,7 +11,7 @@
    <children>
       <SplitPane dividerPositions="0.15719063545150502" layoutX="288.0" layoutY="228.0" orientation="VERTICAL" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: lightBlue;">
+          <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="89.0" style="-fx-background-color: lightBlue;" SplitPane.resizableWithParent="false">
                <children>
                   <Text fx:id="title" layoutX="25.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Medication Reminder">
                      <font>
@@ -19,11 +20,11 @@
                   </Text>
                </children>
             </AnchorPane>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="512.0" prefWidth="798.0">
+          <AnchorPane minHeight="0.0" minWidth="0.0">
                <children>
-                  <HBox alignment="CENTER" layoutX="199.0" layoutY="125.0" prefHeight="250.0" prefWidth="400.0">
+                  <HBox alignment="CENTER" layoutX="199.0" layoutY="125.0" prefHeight="250.0" prefWidth="400.0" AnchorPane.bottomAnchor="124.0" AnchorPane.leftAnchor="199.0" AnchorPane.rightAnchor="174.0" AnchorPane.topAnchor="125.0">
                      <children>
-                        <SplitPane dividerPositions="0.1774193548387097" orientation="VERTICAL" prefHeight="250.0" prefWidth="425.0" style="-fx-background-color: lightBlue;">
+                        <SplitPane dividerPositions="0.1774193548387097" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="250.0" prefWidth="425.0" style="-fx-background-color: lightBlue;" translateX="-13.0">
                           <items>
                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                                  <children>
