@@ -34,24 +34,6 @@ public class MainController
 	private String inFolder;
 
 	@FXML
-	private ComboBox<?> amPmCombo;
-
-	@FXML
-	private String time1;
-
-	@FXML
-	private TextField medName;
-
-	@FXML
-	private String time2;
-
-	@FXML
-	private ComboBox<?> dayCombo;
-
-	@FXML
-	private Button addMedicationButton;
-
-	@FXML
 	private TableColumn<Medication, String> medColumn;
 
 	@FXML
@@ -67,20 +49,23 @@ public class MainController
 	private Button removeMedicationButton;
 
 	@FXML
-	private Button addRemButton;
-
-	@FXML
-	private ComboBox<?> hourCombo;
-
-	@FXML
 	private Button logoutButton;
 	
 	@FXML
 	private TabPane medTabs;
+	
+	@FXML
+	private Button removeRem;
 
 	private static TableView tableView;
 	
 	private static TabPane tabPane;
+	
+	@FXML
+	void removeReminder(ActionEvent event)
+	{
+		
+	}
 	
 	@FXML
 	void logout(ActionEvent event) throws Exception

@@ -41,6 +41,7 @@
 														<TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
 													</columnResizePolicy>
 												</TableView>
+                                    <Button fx:id="removeRem" layoutX="614.0" layoutY="410.0" mnemonicParsing="false" onAction="#removeReminder" text="Remove Reminder" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="14.0" />
 											</children>
 										</AnchorPane>
 									</content>

@@ -1,5 +1,6 @@
 import java.io.Serializable;
 import java.time.DayOfWeek;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 public class Time implements Serializable
@@ -24,6 +25,14 @@ public class Time implements Serializable
 	public String toString()
 	{
 		return timeOfReminder.toString() + ", " + dayOfReminder.toString();
+	}
+	
+	public boolean checkRem()
+	{
+		LocalDateTime now = LocalDateTime.now();
+		
+		return (now.getDayOfWeek().equals(dayOfReminder) && now.getHour() == timeOfReminder.getHour());
+		
 	}
 	
 	private DayOfWeek dayOfReminder;
